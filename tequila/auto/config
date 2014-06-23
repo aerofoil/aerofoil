@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+lb config noauto \
+	--binary-filesystem ext4 \
+	--bootappend-live "hostname=aerofoil username=aero boot=live" \
+	--bootloader grub \
+	--apt aptitude \
+	--grub-splash splash.png \
+	"${@}"
