@@ -1,0 +1,8 @@
+#! /bin/sh
+
+echo "HOOK: Install alternation"
+
+apt-get install --yes python
+apt-get install --yes python-pip
+pip install i3-py
+echo 'exec alternation' >> /home/aero/.i3/config
